@@ -1,0 +1,23 @@
+#{selenium}
+    // click on a game by opening the homepage
+
+    open('/play/Duck+Runner')
+    waitForPageToLoad(1000)
+    verifyTitle('oyunsensin.com / Duck Runner')
+    
+    // verify the structure
+
+    verifyElementPresent(css=div#main>div#content>div#game_play_box>div#game_player)
+    verifyElementPresent(css=div#main>div#content>*>div#game_play_information)
+
+    // verify the content
+
+    verifyText(css=*#game_name, 'Duck Runner')
+    verifyText(css=*#game_description, 'You're here to run a duck from flying angels')
+    verifyText(css=*#game_playing_tips, 'Follow your heart')
+    verifyText(css=*#game_playing_keys, 'Arrow keys are fine.')
+    
+    // BUG: . karakteri selenium'da bug'a neden oldugu icin boyle bir selector kullandim
+    
+    verifyElementPresent(css=div#game_player[player-url*='/public/games/duck_runner'][player-url$='swf'])
+#{/selenium}

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+        <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/reset.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/global.css">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/game.css">
+        #{get 'moreStyles' /}
+        
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+        <script src="/javascripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/javascripts/global.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/javascripts/animation.js" type="text/javascript" charset="utf-8"></script>
+        #{get 'moreScripts' /}
+        
+    </head>
+    <body>
+
+        <div id="innerShadow">
+            <img src="/images/kas.png" id="innerShadow" />
+        </div>
+
+        <div id="top">
+            <div id="yellow_lights"></div>
+            <div id="clouds"></div>
+        </div>
+
+        
+        <div id="white_shadow_background">
+			<div id="logo"></div>
+            #{doLayout /}
+            
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,25 @@
+#{selenium}
+    // open the home page, and check that no error occured
+    
+    open('/')
+    waitForPageToLoad(1000)
+    assertNotTitle('Application error')
+
+    // verify the structure
+    
+    verifyElementPresent(//div[@id='main'])
+    verifyElementPresent(//div[@id='main']/div[@id='top'])
+    verifyElementPresent(//div[@id='main']/div[@id='content'])
+    verifyElementPresent(//div[@id='main']/div[@id='bottom'])
+
+    // look that oyunsensin.com logo is there
+
+    verifyElementPresent(//div[@id='top']/a[@id='logo'])
+    
+    // click on the logo to goto the main page
+    click(css=a#logo)
+    waitForPageToLoad(1000)
+    assertTitle('oyunsensin.com')
+    
+    // TODO: oyunsensin.com title'i dictionary'den gelmeli...
+#{/selenium}

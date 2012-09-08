@@ -1,0 +1,19 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+secure.logoutButton=Logout
+
+name=Name
+email=E-Mail Address
+password=Password
+description=Description
+gamePath=SWF File Path
+playingTips=Playing Tips
+playingKeys=Playing Keys
+thumbnailPath=Mini Thumbnail File Path
+largeThumbnailPath=Large Thumbnail File Path
+addedAt=When This Game Is Added?
+
+crud.title=Oyunsensin.com Administration
+crud.username=shit

@@ -1,0 +1,27 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+GET		/images/								staticDir:public/images
+GET		/stylesheets/							staticDir:public/stylesheets
+GET		/fonts/									staticDir:public/stylesheets/fonts
+GET		/javascripts/							staticDir:public/javascripts
+
+GET     /random/{currentHeadlineGame}           Application.random
+
+GET     /play/{gameName}                        PlayGame.index
+
+# CRUD routes
+*       /admin                                  module:crud
+
+# Security routes
+*       /admin                                  module:security
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
+

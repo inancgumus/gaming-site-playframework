@@ -1,0 +1,82 @@
+﻿#{extends 'main.html' /}
+#{set title:'OYUN SENSİN' /}
+
+    <div id="main">
+        <div id="content">
+            <div id="main_game_info_box" class="radius_border">
+                <div id="main_game_image_holder">
+                    <img id="main_game_image" 
+                        src="${game.largeThumbnailPath }" />
+                </div>
+                
+                <div id="game_texts">
+                    <div id="main_game_name_box">
+                        <p class="random_game_name GothamRoundedMedium" 
+                            id="main_game_name">${game.name}</p>
+                    </div>
+                    <div id="main_game_description_box">
+                        <p class="random_game_description GothamRoundedBook" 
+                            id="main_game_description">
+                                ${game.description}</p>
+                    </div>
+                </div>
+                
+                <div id="main_game_play_button">
+                    <a href="@{PlayGame.index(game.name.urlEncode())}" 
+                        id="main_game_play_link"></a>
+                </div>
+            </div>
+            
+            <div id="main_right_box">
+                <div id="banner" class="radius_border">
+                    <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+                </div>
+                <div id="random_game_button_area" class="radius_border">
+                    <div id="random_game_button">
+                        <a href="javascript:return(false);" 
+                            id="random_game_play_link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+        <div id="twitter" class="radius_border">
+            <span class="twitterHeader GothamRoundedMedium">TWITTER :</span>
+                <span class="twitterText GothamRoundedBook">
+                Sitemize google reklamları eklemeye başladık. 
+                Sizlerin kullanıcı deneyiminizi...
+            </span>
+        </div>
+        <div id="copyright_footer_text">
+            <span class="twitterText GothamRoundedMedium">
+                <br/>© Copyright 2010 - 2011 
+                    <span class="twitterHeader GothamRoundedMedium">
+                        Port Seksen Ltd. Şti.
+                    </span> 
+                    Tüm hakları saklıdır.
+            </span>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        var playGameAction = #{jsAction @PlayGame.index(':name') /}
+        var currentHeadlineGame = '${game.nameUrlEncoded()}';
+
+        $('#random_game_button').click(function() {
+            $.get('/random/'+ currentHeadlineGame, function(randomGame) {
+                // turn around for replacing 20% urlencoded to +
+                // just like in play urlEncode
+                currentHeadlineGame = randomGame.name.replace(' ', '+');
+                
+                $('#main_game_play_link').attr('href',
+                    playGameAction({name: currentHeadlineGame}));
+                $('#main_game_image').attr('src',
+                    randomGame.largeThumbnailPath);
+                $('#main_game_name').text(randomGame.name);
+                $('#main_game_description').text(randomGame.description);
+            });
+        });
+    </script>
+    

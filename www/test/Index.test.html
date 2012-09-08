@@ -1,0 +1,25 @@
+#{selenium}
+    // TODO: buradaki selector'leri css'e cevir
+
+    // open the home page, and check that no error occured
+
+    open('/')
+    waitForPageToLoad(1000)
+    assertTitle('oyunsensin.com')
+
+    // verify the structure
+
+    verifyElementPresent(css=div#main>div#content>div#main_game_info_box)
+    verifyElementPresent(css=div#main_game_info_box>*>img#main_game_large_thumbnail)
+
+    verifyElementPresent(css=div#main_game_info_box>a[href*='/play/'])
+    verifyElementPresent(css=img#main_game_large_thumbnail[src*='/public/game-images/'][src$='jpg'])
+    
+    // how to test for random objects?
+
+    // verifyText(css=*#game_name, 'Duck Runner')
+    // verifyText(css=*#game_description, 'You're here to run a duck from flying angels')
+    // verifyElementPresent(css=div#main_game_info_box>a[href*='/play/Duck+Runner'])
+    // verifyElementPresent(css=img#main_game_large_thumbnail[src*='/public/game-images/duck_runner_large'][src$='jpg'])
+    
+#{/selenium}

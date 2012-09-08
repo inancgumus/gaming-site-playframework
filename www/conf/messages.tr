@@ -1,0 +1,76 @@
+# modeller
+game=oyun
+Game=Oyun
+games=oyunlar
+Games=Oyunlar
+user=kullanıcı
+User=Kullanıcı
+users=kullanıcılar
+Users=Kullanıcılar
+
+# play/modules/crud (administration) 
+#crud.title= 
+crud.home=Ana Ekran 
+crud.blank=Boş 
+crud.index.title=Ana Yönetim Ekranı
+crud.index.objectType= 
+crud.index.action=
+crud.index.add=Ekleyin!
+crud.add=Yeni Bir &{%s} Ekleyin 
+crud.list.title=&{%s} 
+crud.list.size=Toplam %d Adet
+crud.list.totalSize=Toplam %d adet
+crud.pagination.previous=« Önceki 
+crud.pagination.next=Sonraki » 
+crud.pagination.last=Sonuncu »» 
+crud.pagination.first=«« İlk 
+crud.show.title = &{%s} Yönetimi 
+crud.save=Kaydet
+crud.saveAndContinue=Kaydet ve Düzenlemeye Devam Et
+crud.cancel=İptal
+crud.hasErrors=Hatalar Var
+crud.blank.title=&{%s} Boş 
+crud.saveAndAddAnother=Kaydet ve Bir Tane Daha Ekle
+crud.delete=Sil
+crud.created=&{%s} Oluşturuldu!
+crud.saved=&{%s} Kaydedildi!
+crud.deleted=&{%s} Silindi!
+crud.delete.error=Silme işleminde hata oluştu
+crud.search=Ara
+crud.none=(Boş) 
+crud.help.required=Gereklidir.
+crud.help.minlength=En az %d karakter girmelisiniz.
+crud.help.maxlength=En çok %d karakter girebilirsiniz.
+crud.help.email=E-Posta Adresi
+crud.help.dateformat=DD-MM-YYYY şeklinde giriniz.
+crud.help.numeric=Nümerik Alan
+crud.help.min = Moet groter daan %d zijn. 
+crud.help.future = In de toekomst. 
+crud.help.past = In het verleden. 
+crud.help.after = Na %s. 
+crud.help.before = Voor %s. 
+crud.help.range = Tussen %d en %d 
+ 
+# play/modules/secure 
+secure.title=oyunsensin.com
+secure.username=E-Posta Adresiniz:
+secure.password=Şifreniz:
+secure.signin=Giriş Yap
+secure.remember=Beni Hatırla
+secure.error=Geçersiz kullanıcı veya şifre.
+secure.logout=Sistemden çıktınız.
+secure.logoutButton=Çıkış
+
+# diger
+name=İsim
+email=E-Posta Adresi
+password=Şifre
+description=Açıklama
+gamePath=SWF Dosya yolu
+playingTips=Nasıl Oynanır
+playingKeys=Hangi Tuşlarla Oynanır
+thumbnailPath=Oyunun Minik Resmine Dosya Yolu
+largeThumbnailPath=Oyunun Büyük Resmine Dosya Yolu
+addedAt=Bu Oyun Ne Zaman Eklendi?
+
+crud.title=Oyunsensin.com Yönetimi

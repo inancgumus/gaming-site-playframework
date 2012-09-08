@@ -1,0 +1,30 @@
+Game(duckRunnerGame):
+    name: Duck Runner
+    description: You're here to run a duck from flying angels
+    gamePath: /public/games/duck_runner.swf
+    playingTips: Follow your heart
+    playingKeys: Arrow keys are fine.
+    thumbnailPath: /public/game-images/duck_runner.png
+    largeThumbnailPath: /public/game-images/duck_runner_large.png
+    addedAt: 2010-09-29
+
+Game(parkingLotGame):
+    name: Parking Lot
+    description: You need to park fast!
+    gamePath: /public/games/parking_lot.swf
+    playingTips: Use your head!
+    playingKeys: Just press the up arrow!
+    thumbnailPath: /public/game-images/parking_lot.png
+    largeThumbnailPath: /public/game-images/parking_lot_large.png
+    addedAt: 2010-10-03
+
+User(inancgumus):
+    name: Inanc Gumus
+    email: test1@oyunsensin.com
+    password: test1
+
+User(kivancgumus):
+    name: Kivanc Gumus
+    email: test2@oyunsensin.com
+    password: test2
+

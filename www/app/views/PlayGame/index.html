@@ -1,0 +1,77 @@
+#{extends 'main.html' /}
+#{set 'moreScripts'} 
+#{script 'jquery.flash.js' /}
+<script type='text/javascript' charset='utf-8'>
+	$(
+		function()
+		{
+			// auto center fix
+			// right box + playing area padding + playing area borders
+			$('#white_shadow_background').css('width', $('#game_player').width() + 333 + 42 + 6);
+			$('div#game_navigation ul li a#game_navigation_game_name').css('width', $('#game_player').width() - 145);
+			$('div#game_navigation ul li a span').css('width', $('#game_player').width() - 145);
+			$('#yellow_lights').css('left', 0);
+		}
+	);
+</script> 
+#{/set}
+#{set 'moreStyles'} 
+#{/set}
+#{set 'title'}
+    OYUN SENSİN ${game ?  ' / ' + game.name : '' }
+#{/set}
+
+
+    <div id="game_main">
+        <div id="game_playing_area" class="radius_border">
+            #{if game}
+                <div id="game_navigation">
+                    <ul>
+						<li><a href="/" id="game_navigation_home_button" title="Ana Sayfa"></a></li>
+                        <li><a href="#" id="game_navigation_game_name" title="${game.name}"><span>${game.name}</span></a></li>
+                    </ul>
+                </div>
+                <div id="game_player"></div>
+            #{/if}
+            #{else}
+                <h1>Aradığınız oyunu maalesef bulamadık.</h1>
+            #{/else}
+        </div>
+        
+        <div id="game_right_box">
+            <div id="banner" class="radius_border">
+                <script type="text/javascript"
+                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
+            </div>
+            <div id="game_description_box" class="radius_border">
+                <span class="box_header_font GothamRoundedMedium">Açıklama :</span>
+                <span class="box_text_font GothamRoundedBook"><br/><br/>${game.description}</span>
+            </div>
+            <div id="game_playing_tips_box" class="radius_border">
+                <span class="box_header_font GothamRoundedMedium">Nasıl Oynanır?</span>
+                <span class="box_text_font GothamRoundedBook"><br/><br/>${game.playingTips} <br/> ${game.playingKeys}</span>
+            </div>
+        </div>
+    </div>
+    <div id="copyright_footer_text">
+        <span class="twitterText GothamRoundedMedium">
+           © Copyright 2010 - 2011 <span class="twitterHeader GothamRoundedMedium">Port Seksen Ltd. Şti.</span> Tüm hakları saklıdır.
+        </span>
+    </div>
+    
+    <script type='text/javascript' charset='utf-8'>
+        var player = document.getElementById('game_player');
+        var playerUrl = '${game.gamePath}';
+        *{TODO: yalnizca development icin bu kismi acmali}*
+        player.setAttribute('player-url', playerUrl);
+        
+        $('#game_player').flash(
+            { src: playerUrl,
+              width: 800,
+              height: 600 },
+            { version: 8 }
+        );
+		
+		
+    </script>

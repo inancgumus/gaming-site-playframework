@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.twitterHeader 
+{
+    font-size: 11px;
+    color: #65a0fe;
+}
+
+.twitterText 
+{
+    font-size: 11px;
+    color: #9a9a9a;
+}
+
+p.random_game_name
+{
+    font-size:24px;
+    color: #373737;
+    line-height:22px;
+    letter-spacing:-1.2px;
+}
+
+p.random_game_description
+{
+    font-size:11px;
+    color: #828282;
+}
+
+/* -------------------------- MAIN STAGE */
+
+#main 
+{
+    margin-left:auto;
+    margin-right:auto;
+    position:relative;
+    top:-29px;
+}
+
+#content
+{
+    width:671px;
+    height:383px;
+}
+
+#main_game_info_box
+{
+    width:318px;
+    height:364px;
+    float:left;
+    padding: 7px;
+}
+
+#main_game_image_holder
+{
+    width:310px;
+    height:159px;
+    padding:4px;
+}
+
+#game_texts
+{
+    height:104px;
+}
+
+#main_game_name_box
+{
+    margin:12px 15px 3px 15px;
+}
+
+#main_game_description_box
+{
+    padding: 0px 15px;
+    overflow:hidden;
+}
+
+#main_game_play_button a
+{
+    display:block;
+    background:url(/images/playGameButton.png) 0 0 no-repeat;    
+    width:318px;
+    height:81px;
+}
+
+#main_game_play_button a:hover
+{
+    background:url(/images/playGameButton.png) 0 0 no-repeat;    
+    background-position: 0px -81px;
+}
+
+/* RIGHT AREA */
+#main_right_box
+{
+    width:328px;
+    height:383px;
+    float:left;    
+    margin-left:5px;
+}
+
+/* BANNER */
+#banner
+{
+    width:300px;
+    height:250px;
+    padding: 11px;
+}
+
+
+/* RANDOM GAME AREA */
+#random_game_button_area
+{
+    width:308px;
+    height:81px;
+    margin-top:5px;    
+    padding: 7px;    
+}
+
+#random_game_button a
+{
+    display:block;
+    background:url(/images/playRandomButton.png) 0 0 no-repeat;    
+    width:308px;
+    height:81px;
+}
+
+#random_game_button a:hover
+{
+    background-position: 0 -81px;
+}
+
+/* -------------------------- TWITTER */
+
+#twitter
+{
+    width:621px;
+    height:14px;
+    margin-top:6px;
+    padding:20px 22px;
+    vertical-align:middle;
+}

@@ -1,10 +1,11 @@
-# Extracted from https://github.com/ulrich/macaron-factory/blob/master/.gitignore
-# Ignore all dotfiles...
+www/tmp/
+.svn
+play-1.0.3.2/
+only htmls/
+tools/
+*.webloc
 .*
-# except for .gitignore
 !.gitignore
-
-# Ignore Play! working directory #
 db
 eclipse
 log
